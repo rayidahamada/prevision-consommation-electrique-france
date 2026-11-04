@@ -1,0 +1,51 @@
+# Environnement Python et caches
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Secrets et configuration locale
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+credentials.json
+credentials*.json
+secrets.json
+secrets.yaml
+secrets.yml
+
+# Données brutes : conserver uniquement le marqueur
+data/raw/*
+!data/raw/.gitkeep
+
+# Artefacts de modèles : aucun binaire généré dans Git
+/models/*
+!/models/.gitkeep
+!/models/README.md
+*.joblib
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.onnx
+*.pt
+*.pth
+*.keras
+*.safetensors
+
+# Fichiers temporaires et système
+*.tmp
+*.temp
+*.log
+~$*
+.DS_Store
+Thumbs.db
