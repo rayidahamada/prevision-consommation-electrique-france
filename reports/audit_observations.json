@@ -1,0 +1,92 @@
+{
+  "rows": 258576,
+  "column_count": 12,
+  "columns": [
+    "consommation_brute_electricite_rte",
+    "consommation_brute_gaz_grtgaz",
+    "consommation_brute_gaz_terega",
+    "consommation_brute_gaz_totale",
+    "consommation_brute_totale",
+    "date",
+    "date_heure",
+    "flag_ignore",
+    "heure",
+    "statut_grtgaz",
+    "statut_rte",
+    "statut_terega"
+  ],
+  "rows_missing_required_keys": 0,
+  "missing_by_column": {
+    "consommation_brute_electricite_rte": 0,
+    "consommation_brute_gaz_grtgaz": 129288,
+    "consommation_brute_gaz_terega": 129291,
+    "consommation_brute_gaz_totale": 129292,
+    "consommation_brute_totale": 129292,
+    "date": 0,
+    "date_heure": 0,
+    "flag_ignore": 0,
+    "heure": 0,
+    "statut_grtgaz": 129288,
+    "statut_rte": 1440,
+    "statut_terega": 129288
+  },
+  "invalid_timestamps": 0,
+  "timestamps_off_utc_halfhour_grid": 0,
+  "timestamps_descend_in_file": true,
+  "all_rows_time": {
+    "valid_timestamps": 258576,
+    "unique_timestamps": 258543,
+    "duplicate_timestamp_excess": 33,
+    "start_utc": "2011-12-31T23:00:00+00:00",
+    "end_utc": "2026-09-30T21:30:00+00:00",
+    "interval_seconds_counts": {
+      "1800": 258525,
+      "3600": 3,
+      "5400": 14
+    },
+    "missing_halfhour_slots_between_grid_bounds": 31
+  },
+  "finite_electricity_time": {
+    "valid_timestamps": 258576,
+    "unique_timestamps": 258543,
+    "duplicate_timestamp_excess": 33,
+    "start_utc": "2011-12-31T23:00:00+00:00",
+    "end_utc": "2026-09-30T21:30:00+00:00",
+    "interval_seconds_counts": {
+      "1800": 258525,
+      "3600": 3,
+      "5400": 14
+    },
+    "missing_halfhour_slots_between_grid_bounds": 31
+  },
+  "electricity": {
+    "field": "consommation_brute_electricite_rte",
+    "documented_unit": "MW (métadonnées, non inféré des valeurs)",
+    "finite_count": 258576,
+    "invalid_numeric_count": 0,
+    "nonfinite_count": 0,
+    "negative_count": 0,
+    "zero_count": 0,
+    "min": 28738.0,
+    "max": 101866.0,
+    "status_counts": {
+      "None": 1440,
+      "Consolidé": 99360,
+      "Définitif": 157776
+    }
+  },
+  "gas_columns": [
+    "consommation_brute_gaz_grtgaz",
+    "consommation_brute_gaz_terega",
+    "consommation_brute_gaz_totale",
+    "statut_grtgaz"
+  ],
+  "limits": [
+    "Pas de seuil haut physique validé ; min/max sont descriptifs.",
+    "Aucune agrégation, imputation ou suppression.",
+    "Fréquence décrite sur dates uniques triées ; ordre original contrôlé séparément.",
+    "Début/fin d'intervalle et puissance moyenne/instantanée non déterminés."
+  ],
+  "input_sha256": "65f6a751d0e02d1a11c6d5e85dc620734b04ffc19f2c2ed3acc110e828125cf3",
+  "computed_at_utc": "2026-11-04T15:49:56.831587+00:00"
+}

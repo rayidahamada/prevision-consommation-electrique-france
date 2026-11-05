@@ -27,6 +27,10 @@ secrets.yml
 data/raw/*
 !data/raw/.gitkeep
 
+# Tables dérivées volumineuses, reproductibles par les scripts de préparation
+/data/processed/*.jsonl
+/data/processed/electricite_horaire_hypothese_*.csv
+
 # Artefacts de modèles : aucun binaire généré dans Git
 /models/*
 !/models/.gitkeep
