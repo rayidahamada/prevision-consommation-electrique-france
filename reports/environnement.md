@@ -4,13 +4,13 @@
 
 Le projet utilise un environnement virtuel local `.venv` avec **Python 3.14.6**. Cet environnement est exclu du suivi Git.
 
-Dans le contexte de la mission 003, l'utilisateur a confirmé depuis son terminal PowerShell :
+Lors de la préparation initiale de l'environnement (mission 003), les vérifications suivantes ont été déclarées comme réalisées dans le terminal PowerShell du responsable du projet :
 
 - l'installation réussie de NumPy, pandas, Matplotlib, scikit-learn, Jupyter et ipykernel ;
 - le résultat `No broken requirements found.` pour `python -m pip check` ;
 - la réussite des imports des six bibliothèques.
 
-Ces validations sont rapportées par l'utilisateur. Elles ne constituent pas des tests d'analyse, de prévision ou de performance. Aucun résultat scientifique n'a été produit.
+Ces validations reposent sur une déclaration du responsable du projet, sans vérification indépendante par Codex lors de cet audit initial. Elles ne constituent pas des tests d'analyse, de prévision ou de performance et ne fournissent aucune mesure de performance prédictive.
 
 ## Dépendances
 

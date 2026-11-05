@@ -384,8 +384,8 @@ nouveaux chemins pour une relance, sans supprimer les versions précédentes. Le
 est déterministe pour une même grille, un même code et une même base de fuseaux. Le rapport
 contient une date d'exécution et n'est donc pas identique octet pour octet entre exécutions.
 
-Aucune donnée précédente modifiée, aucun entraînement, graphique, analyse exploratoire,
-commit ou push. Les CSV générés doivent rester ignorés par Git.
+Le traitement se limite à la préparation des deux scénarios horaires expérimentaux,
+sans modification des données d'entrée. Les CSV générés doivent rester ignorés par Git.
 """
 
 

@@ -1,5 +1,7 @@
 # Conventions temporelles et conception de l'agrégation horaire
 
+> Note de suivi du 5 novembre 2026 : cette étude conserve les propositions et les limites établies avant la préparation horaire expérimentale. Les deux scénarios ont ensuite été construits dans la [mission 008](preparation_horaire_experimentale.md), sous hypothèses explicites et sans confirmer une convention physique RTE/ODRÉ. La mention finale d'attente avant implémentation décrit la clôture de l'étude initiale.
+
 Mission 007 — Phase 2. Projet M1 MIASHS 2026–2027.
 Étude documentaire du 5 novembre 2026 ; aucune série horaire produite.
 
@@ -56,13 +58,13 @@ S3, §1.1 p. 1, distingue pour éCO2mix : puissance instantanée en temps réel 
 
 S4, §1.1 p. 1, décrit également des sources de comptage pour consolidé/définitif et le texte p. 5 donne le pas demi-horaire ; sa formulation n'établit pas le rattachement temporel des moyennes ODRÉ. La concordance des producteurs, unités, fréquences et statuts rend une filiation plausible, mais aucune source consultée ne décrit l'ensemble des transformations jusqu'à notre champ ODRÉ.
 
-Pour « chaque valeur de ce jeu ODRÉ est une moyenne sur exactement 30 minutes, sur toute sa période » : **Je ne peux pas confirmer cette convention à partir des sources consultées.** La nature moyenne est une hypothèse fortement étayée par le contexte RTE, pas une spécification directe du jeu. Le mois dont le statut est absent ne doit pas être assimilé automatiquement à l'une des catégories éCO2mix.
+Pour « chaque valeur de ce jeu ODRÉ est une moyenne sur exactement 30 minutes, sur toute sa période » : **les sources consultées ne permettent pas de confirmer cette convention pour le jeu ODRÉ.** La nature moyenne est une hypothèse fortement étayée par le contexte RTE, pas une spécification directe du jeu. Le mois dont le statut est absent ne doit pas être assimilé automatiquement à l'une des catégories éCO2mix.
 
 ### 2.3 Début, fin ou autre référence de l'intervalle
 
 Ni les descriptions de champs S2 ni les passages pertinents de S3/S4 ne fixent pour `date_heure` le début, la fin ou le centre d'une demi-heure. Le terme « point horaire » des tableaux éCO2mix n'est pas une déclaration de support temporel.
 
-**Je ne peux pas confirmer cette convention à partir des sources consultées.**
+**Les sources consultées ne permettent pas de confirmer cette convention pour le jeu ODRÉ.**
 
 La conversion `date_heure` vers `Europe/Paris`, la présence de `00:00`, la continuité ou l'allure de la courbe ne suffisent pas à trancher. Retenir une convention parce qu'elle réduit les erreurs prédictives serait un choix guidé par l'évaluation, pas une validation physique.
 
@@ -70,7 +72,7 @@ La conversion `date_heure` vers `Europe/Paris`, la présence de `00:00`, la cont
 
 Deux documents éCO2mix de versions différentes ne constituent ni un historique exhaustif des schémas, ni un journal des transformations ODRÉ. Les statuts réellement rencontrés divergent en outre de la description générale du jeu pour certaines années, comme établi dans le diagnostic précédent.
 
-Concernant la constance de la nature des mesures, de leur rattachement temporel et du traitement des fuseaux pendant toute la période : **Je ne peux pas confirmer cette convention à partir des sources consultées.**
+Concernant la constance de la nature des mesures, de leur rattachement temporel et du traitement des fuseaux pendant toute la période : **les sources consultées ne permettent pas de confirmer cette convention pour le jeu ODRÉ.**
 
 Le constat d'offsets UTC dans l'instantané actuel décrit son encodage, pas la méthode de conversion appliquée en amont à chaque millésime. La lecture actuelle des métadonnées ne permet pas de reconstruire leurs anciennes versions.
 
@@ -80,7 +82,7 @@ Le diagnostic précédent relève 30 groupes dupliqués lors des passages au pri
 
 S6 p. 1 confirme que la prévision RTE au passage à l'heure d'hiver doit comporter une 25e heure. Le document ne décrit pas les collisions UTC de notre jeu ni une suppression légitime de créneaux. Une journée locale courte ou longue n'engendre pas, par nécessité, un trou ou un doublon dans le temps UTC écoulé.
 
-Pour une règle officielle expliquant et corrigeant ces anomalies dans cet export : **Je ne peux pas confirmer cette convention à partir des sources consultées.** L'hypothèse d'un traitement de calendrier local reste ouverte ; aucune réaffectation des valeurs n'est justifiée par cette seule hypothèse.
+Pour une règle officielle expliquant et corrigeant ces anomalies dans cet export : **les sources consultées ne permettent pas de confirmer cette convention pour le jeu ODRÉ.** L'hypothèse d'un traitement de calendrier local reste ouverte ; aucune réaffectation des valeurs n'est justifiée par cette seule hypothèse.
 
 ## 3. Comparaison des méthodes d'agrégation
 

@@ -189,4 +189,4 @@ Les tests utilisent uniquement des observations synthétiques. Aucun télécharg
 
 `AGENTS.md` a été lu et l'état Git vérifié avant intervention. Les modifications antérieures sont conservées. Seuls le nouveau script, ses tests, le présent rapport, les deux CSV et une règle `.gitignore` relèvent de cette mission.
 
-La règle `/data/processed/electricite_horaire_hypothese_*.csv` a été ajoutée et contrôlée avec `git check-ignore -v` pour chacun des deux fichiers. Aucun CSV n'est ajouté à l'index Git. Aucun fichier de données précédent n'est modifié, aucun commit ou push n'est réalisé. Validation requise avant toute nouvelle étape.
+La règle `/data/processed/electricite_horaire_hypothese_*.csv` a été ajoutée et contrôlée avec `git check-ignore -v` pour chacun des deux fichiers. Aucun CSV n'est ajouté à l'index Git. Aucun fichier de données précédent n'est modifié, aucun commit ou push n'est réalisé. Les étapes suivantes ne sont pas couvertes par ce rapport.

@@ -58,13 +58,13 @@ def main():
         assert sum(counts[year, status] for status in ("Définitif", "Consolidé", "null")) > 0
     parts = ["""# Diagnostic des anomalies temporelles ODRÉ — Mission 006 bis
 
-Analyse locale du 4 novembre 2026. Aucun nettoyage appliqué.
+Analyse initiale de référence : 4 novembre 2026. Cette date décrit l'étude historique de l'instantané et ne constitue pas un horodatage de réexécution du script. Aucun nettoyage appliqué.
 
 ## 1. Traçabilité et méthode
 
 Données : `data/raw/odre_f6gejuyq/observations.json` ; manifeste et métadonnées dans le même dossier. Audit initial : `reports/audit_observations.json`, conservé sans modification. Le manifeste indique `complete`.
 
-Les règles `AGENTS.md` et l'état Git ont été examinés avant intervention. Plusieurs fichiers de missions précédentes étaient déjà non suivis. Le script `src/diagnostic_temporel.py` rend les calculs reproductibles avec `.venv`, la bibliothèque standard, les fonctions existantes `audit` et `parse_time`, et `ZoneInfo('Europe/Paris')`. Il ne modifie pas les données ; il écrit uniquement ce rapport. Commande : `python -m src.diagnostic_temporel` depuis la racine. Les assertions sont propres à cet instantané et doivent échouer si son contenu change.
+Le script `src/diagnostic_temporel.py` rend les calculs reproductibles avec `.venv`, la bibliothèque standard, les fonctions existantes `audit` et `parse_time`, et `ZoneInfo('Europe/Paris')`. Il ne modifie pas les données ; il écrit uniquement ce rapport. Commande : `python -m src.diagnostic_temporel` depuis la racine. Les assertions sont propres à cet instantané et doivent échouer si son contenu change. Le rapport décrit le diagnostic de l'instantané de référence et n'établit pas l'état Git ni l'avancement actuel du projet.
 
 Empreinte SHA-256 recalculée, égale au manifeste et au rapport initial :
 
@@ -160,9 +160,9 @@ Consultations du 4 novembre 2026, sans acquisition supplémentaire d'observation
 
 Le fuseau UTC est confirmé par les métadonnées locales et les timestamps avec offset. La convention début/fin d'intervalle demeure non confirmée. La nature moyenne est confirmée pour les fichiers éCO2mix consolidés/définitifs ; la transposition à ce jeu reste une inférence, particulièrement pour le mois sans statut. Aucun document consulté n'établit la cause des anomalies ni une règle de correction ou la signification de `flag_ignore`.
 
-Questions à adresser au producteur après autorisation de contact : traitement des transitions, anomalies de décembre, statut du dernier mois, divergence des statuts annuels et rattachement exact des puissances. Aucun message envoyé.
+Questions techniques à clarifier auprès du producteur : traitement des transitions, anomalies de décembre, statut du dernier mois, divergence des statuts annuels et rattachement exact des puissances. Le script n'effectue aucun contact avec le producteur.
 
-## 8. Règles de préparation proposées, non appliquées
+## 8. Règles documentées pour l'instantané de référence
 
 1. Conserver le brut et son empreinte. Une future table dérivée gardera positions sources, UTC original, conversion locale, statuts bruts, flags et indicateurs d'anomalie.
 2. Trier uniquement la table dérivée en UTC ; aucune localisation implicite ou reconstruction arbitraire depuis les heures textuelles.
@@ -179,7 +179,7 @@ Questions à adresser au producteur après autorisation de contact : traitement 
 
 Les assertions vérifient la concordance intégrale avec l'audit initial, les comptes d'anomalies, la continuité du bloc sans statut, les 30 discordances locales et le flag constant. Les valeurs annuelles sont contrôlées contre les libellés Unicode réels. L'empreinte brute est vérifiée avant et après calcul. Les contrôles sont descriptifs ; aucun résultat prédictif n'est produit.
 
-Le JSON initial reste inchangé. Le rapport narratif est complété par un renvoi à ce diagnostic, en conservant l'historique des tentatives. Aucun nettoyage, imputation, déduplication, agrégation, téléchargement d'observations, modèle, commit ou push. Mission 007 non commencée.
+Le JSON initial reste inchangé. Ce traitement produit uniquement le diagnostic de l'instantané de référence, sans nettoyage, imputation, déduplication, agrégation ni téléchargement d'observations. L'historique des tentatives et l'avancement des étapes sont documentés dans les rapports correspondants ; ils ne sont pas déduits d'une réexécution du script.
 """)
     assert hashlib.sha256(path.read_bytes()).hexdigest() == digest
     target = ROOT / "reports/diagnostic_anomalies_temporelles.md"

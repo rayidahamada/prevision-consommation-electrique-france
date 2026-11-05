@@ -166,8 +166,8 @@ def markdown_report(summary):
               "Sorties créées exclusivement : une relance avec les mêmes chemins est refusée. "
               "En cas d'interruption d'écriture, un fichier partiel peut subsister sans rapport final validé ; "
               "ne pas le considérer comme un résultat complet. Aucun fichier existant n'est écrasé.", "",
-              "Aucune donnée brute modifiée, aucune série horaire, aucun modèle, commit ou push. "
-              "La phase 2 nécessite une validation distincte.", ""]
+              "Ce rapport couvre uniquement la préparation demi-horaire, sans modification des données brutes. "
+              "Il ne produit ni série horaire ni modèle.", ""]
     return "\n".join(lines)
 
 

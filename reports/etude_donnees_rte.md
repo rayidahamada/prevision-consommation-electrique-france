@@ -1,5 +1,7 @@
 # Étude du jeu ODRÉ et protocole de prévision à 24 heures
 
+> Note de suivi du 5 novembre 2026 : les propositions et vérifications impossibles ci-dessous décrivent l'étude documentaire initiale du 4 novembre 2026. L'acquisition et l'audit ont ensuite été réalisés et sont décrits dans [l'audit qualité](audit_qualite_donnees.md) et [le diagnostic temporel](diagnostic_anomalies_temporelles.md). La section 7 conserve les étapes alors proposées ; elle ne signifie pas que l'acquisition est toujours en attente. Les incertitudes physiques restent détaillées dans [l'étude d'agrégation](etude_agregation_horaire.md).
+
 Mission 005 — M1 MIASHS 2026–2027. Consultation documentaire : 4 novembre 2026.
 
 ## 1. Portée et sources consultées

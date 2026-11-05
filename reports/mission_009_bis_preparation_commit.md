@@ -1,5 +1,7 @@
 # Mission 009 bis — Corrections documentaires et préparation du commit
 
+> Note de suivi du 5 novembre 2026 : ce rapport conserve l'état documentaire et Git relevé avant publication. Les 18 chemins de la section 8 ont ensuite été enregistrés dans le commit `b718383`, et le titre des prochaines étapes du README a été corrigé dans `7c4729c`. Les mentions de fichiers non suivis, d'index vide et d'opérations envisagées décrivent donc l'état historique de cette préparation, sans remettre en cause les contrôles consignés.
+
 Projet M1 MIASHS 2026–2027 — Prévision de la consommation électrique française sur les 24 prochaines heures.
 
 Vérifications le **5 novembre 2026** ; début UTC relevé à **14:21:30**. Contrôle intermédiaire des empreintes et corrections à **2026-11-05T14:25:33.903654+00:00**. Les contrôles finaux sont réalisés après création du présent rapport.
@@ -59,7 +61,7 @@ Le périmètre de recherche des chemins personnels est l'ensemble des fichiers s
 
 ## 4. Métadonnées ODRÉ : provenance et limites
 
-Le rapport initial de mission 009 est conservé, y compris les échecs réseau. Une nouvelle section intitulée **« Complément de vérification externe à l'audit initial — Mission 009 bis »** distingue les informations transmises par l'utilisateur des vérifications Codex.
+Le rapport initial de mission 009 est conservé, y compris les échecs réseau. Une nouvelle section intitulée **« Complément de vérification externe à l'audit initial — Mission 009 bis »** distingue les informations transmises par le responsable du projet des vérifications Codex.
 
 Source déclarée :
 
@@ -132,7 +134,7 @@ Git émet l'avertissement habituel LF/CRLF pour `.gitignore` et le README. Il n'
 
 ## 7. État Git final et préservation des travaux antérieurs
 
-État attendu et revérifié après création du présent rapport :
+État constaté le 5 novembre 2026 après création du présent rapport, avant l'enregistrement des fichiers dans `b718383` :
 
 - branche `main`, sans nouveau commit ni changement d'historique ;
 - **deux fichiers suivis modifiés** : `.gitignore` (modification antérieure conservée), `README.md` ;
@@ -173,7 +175,7 @@ Message proposé, non exécuté :
 chore: versionner les audits ODRÉ et documenter les préparations expérimentales
 ```
 
-La prochaine action, uniquement après validation explicite, serait de sélectionner les chemins autorisés puis de revoir l'index réel (`git diff --cached --stat`, `git diff --cached --check`, `git diff --cached`) avant toute décision de commit. Aucune commande `git add`, `git commit` ou `git push` n'est exécutée dans cette mission.
+À la clôture de cette préparation, l'étape envisagée était la sélection des chemins à indexer, suivie de la revue de l'index (`git diff --cached --stat`, `git diff --cached --check`, `git diff --cached`). Aucune commande `git add`, `git commit` ou `git push` n'avait été exécutée pendant cette mission. Les fichiers ont ensuite été enregistrés dans `b718383`.
 
 ## 9. Limites, points bloquants et validation
 
@@ -181,9 +183,9 @@ Les corrections documentaires demandées sont prêtes pour revue. L'accès direc
 
 Pour reproduire exactement l'historique, une personne qui clone devra obtenir l'instantané conservé séparément, puis vérifier son empreinte. Les scripts et rapports explicitent les chemins et les règles ; ils ne garantissent pas que le portail vivant restitue la même version. Les dépendances non figées et les conventions physiques encore ouvertes restent documentées, sans changement automatique de protocole.
 
-Les méthodes de comparaison de versions proposées en mission 009 restent des compléments méthodologiques à faire valider, sans attribution artificielle aux cours de M1 et sans implémentation nouvelle. Aucun choix A/B, EDA, entraînement ou évaluation n'est effectué.
+Les méthodes de comparaison de versions proposées en mission 009 constituent des compléments méthodologiques dont l'intégration au protocole reste à discuter. Elles ne sont pas attribuées à un enseignement particulier et ne font l'objet d'aucune implémentation nouvelle. Aucun choix A/B, EDA, entraînement ou évaluation n'est effectué.
 
-**Validation humaine requise avant toute mise en index, création de commit ou publication.** Aucun blocage documentaire supplémentaire n'est identifié dans le périmètre contrôlé ; la revue de contenu et la décision de publication appartiennent à l'utilisateur.
+Lors de la clôture de cette préparation, la mise en index et la publication restaient soumises à l'accord du responsable du projet. Aucun blocage documentaire supplémentaire n'avait été identifié dans le périmètre contrôlé. Le versionnement ultérieur est indiqué dans la note de suivi en tête du rapport.
 
 ## 10. Clôture des vérifications
 

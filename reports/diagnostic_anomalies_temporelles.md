@@ -1,5 +1,7 @@
 # Diagnostic des anomalies temporelles ODRÉ — Mission 006 bis
 
+> Note de suivi du 5 novembre 2026 : ce rapport décrit le diagnostic initial du 4 novembre 2026. Certaines règles proposées ont ensuite été mises en œuvre dans la [préparation demi-horaire](preparation_electricite_phase1.md) et la [préparation horaire expérimentale](preparation_horaire_experimentale.md). Les hypothèses physiques restent non confirmées ; les états Git et les étapes non commencées mentionnés ci-dessous se rapportent à la clôture du diagnostic initial.
+
 Analyse locale du 4 novembre 2026. Aucun nettoyage appliqué.
 
 ## 1. Traçabilité et méthode
@@ -215,9 +217,9 @@ Consultations du 4 novembre 2026, sans acquisition supplémentaire d'observation
 
 Le fuseau UTC est confirmé par les métadonnées locales et les timestamps avec offset. La convention début/fin d'intervalle demeure non confirmée. La nature moyenne est confirmée pour les fichiers éCO2mix consolidés/définitifs ; la transposition à ce jeu reste une inférence, particulièrement pour le mois sans statut. Aucun document consulté n'établit la cause des anomalies ni une règle de correction ou la signification de `flag_ignore`.
 
-Questions à adresser au producteur après autorisation de contact : traitement des transitions, anomalies de décembre, statut du dernier mois, divergence des statuts annuels et rattachement exact des puissances. Aucun message envoyé.
+Questions techniques à clarifier auprès du producteur : traitement des transitions, anomalies de décembre, statut du dernier mois, divergence des statuts annuels et rattachement exact des puissances. Aucun message n'avait été envoyé lors du diagnostic initial.
 
-## 8. Règles de préparation proposées, non appliquées
+## 8. Règles proposées lors du diagnostic initial
 
 1. Conserver le brut et son empreinte. Une future table dérivée gardera positions sources, UTC original, conversion locale, statuts bruts, flags et indicateurs d'anomalie.
 2. Trier uniquement la table dérivée en UTC ; aucune localisation implicite ou reconstruction arbitraire depuis les heures textuelles.
@@ -234,4 +236,4 @@ Questions à adresser au producteur après autorisation de contact : traitement 
 
 Les assertions vérifient la concordance intégrale avec l'audit initial, les comptes d'anomalies, la continuité du bloc sans statut, les 30 discordances locales et le flag constant. Les valeurs annuelles sont contrôlées contre les libellés Unicode réels. L'empreinte brute est vérifiée avant et après calcul. Les contrôles sont descriptifs ; aucun résultat prédictif n'est produit.
 
-Le JSON initial reste inchangé. Le rapport narratif est complété par un renvoi à ce diagnostic, en conservant l'historique des tentatives. Aucun nettoyage, imputation, déduplication, agrégation, téléchargement d'observations, modèle, commit ou push. Mission 007 non commencée.
+Le JSON initial reste inchangé. Le rapport narratif est complété par un renvoi à ce diagnostic, en conservant l'historique des tentatives. Aucun nettoyage, imputation, déduplication, agrégation, téléchargement d'observations, modèle, commit ou push. À la clôture du diagnostic initial, la mission 007 n'avait pas commencé.

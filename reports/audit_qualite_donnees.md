@@ -1,5 +1,7 @@
 # Acquisition et audit qualité ODRÉ — Mission 006
 
+> Note de lecture du 5 novembre 2026 : les sections initiales conservent les résultats de la première tentative d'acquisition, qui avait échoué. L'acquisition réussie et l'audit ultérieur sont documentés dans le complément de la section 9. La procédure de la section 8 décrit l'étape alors envisagée et ne constitue pas une nouvelle demande de téléchargement.
+
 Date : 4 novembre 2026. Projet M1 MIASHS 2026–2027.
 
 ## 1. État constaté et portée

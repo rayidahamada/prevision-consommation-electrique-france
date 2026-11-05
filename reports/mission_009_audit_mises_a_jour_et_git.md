@@ -1,5 +1,7 @@
 # Mission 009 — Vérification des mises à jour ODRÉ et audit Git
 
+> Note de suivi du 5 novembre 2026 : les inventaires Git, les corrections proposées et les attentes de publication ci-dessous décrivent l'état constaté avant versionnement. Les scripts, tests et rapports ont ensuite été enregistrés dans `b718383` ; le titre des prochaines étapes du README a été reformulé dans `7c4729c`. Les corrections documentaires de mission 009 bis sont décrites dans la section 13. Les constats initiaux, dates, échecs réseau et preuves d'exécution sont conservés.
+
 Projet M1 MIASHS 2026–2027 — Prévision de la consommation électrique française sur les 24 prochaines heures.
 
 ## 1. Date UTC, périmètre et synthèse
@@ -290,7 +292,7 @@ Contrôle final effectué à **2026-11-05T14:03:14.993361+00:00** : les **26 fic
 
 ## 13. Complément de vérification externe à l'audit initial — Mission 009 bis
 
-Ajout documentaire du 5 novembre 2026. **Les métadonnées ci-dessous ont été communiquées par l'utilisateur à la suite d'une consultation externe de l'API officielle ; elles ne sont pas présentées comme une requête réussie par Codex.** L'heure UTC précise et la réponse brute de cette consultation externe ne sont pas fournies.
+Ajout documentaire du 5 novembre 2026. **Les métadonnées ci-dessous ont été communiquées par le responsable du projet à la suite d'une consultation externe de l'API officielle ; elles ne sont pas présentées comme une requête réussie par Codex.** L'heure UTC précise et la réponse brute de cette consultation externe ne sont pas fournies.
 
 Source déclarée : [API officielle ODRÉ, métadonnées du jeu](https://odre.opendatasoft.com/api/explore/v2.1/catalog/datasets/consommation-quotidienne-brute).
 

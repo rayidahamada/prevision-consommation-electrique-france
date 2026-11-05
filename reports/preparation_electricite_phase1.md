@@ -1,5 +1,7 @@
 # Préparation contrôlée des données électriques — Mission 007, phase 1
 
+> Note de suivi du 5 novembre 2026 : la condition de poursuite consignée en fin de phase 1 est historique. La phase 2 a ensuite donné lieu à [l'étude des conventions temporelles](etude_agregation_horaire.md), puis aux [deux scénarios horaires expérimentaux](preparation_horaire_experimentale.md). Cette note ne modifie ni la grille ni les résultats de la phase 1.
+
 > Note documentaire — Mission 009 bis : les chemins locaux absolus de l’exécution historique ont été remplacés par leurs équivalents relatifs à la racine du dépôt. Les noms de fichiers, paramètres, résultats et empreintes sont inchangés.
 
 ## Provenance et paramètres
