@@ -115,7 +115,7 @@ Consulter les commandes réellement utilisées dans les rapports ci-dessous. Les
 
 Les rapports sont datés et peuvent décrire des états historiques : lire leurs compléments pour connaître les vérifications ultérieures. Les limites et hypothèses ne constituent pas des résultats de prévision.
 
-## Étapes restantes, à valider avec l'étudiant
+## Prochaines étapes du projet
 
 1. Valider le protocole de cible et les limites des scénarios expérimentaux.
 2. Réaliser l'analyse exploratoire (EDA).
