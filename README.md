@@ -88,9 +88,14 @@ Dans VS Code, sélectionner `.venv\Scripts\python.exe` avec **Python: Select Int
 ```powershell
 .\.venv\Scripts\python.exe -c "import numpy, pandas, matplotlib, sklearn, jupyter, ipykernel; print('Imports OK')"
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
+.\.venv\Scripts\python.exe scripts/check_documentation.py
 ```
 
 Exécuter ces commandes depuis la racine du dépôt. Les tests sont synthétiques ; ils ne prouvent ni l'accès au portail ni une convention physique des données. Aucun notebook d'analyse n'est encore livré.
+
+Le contrôle rédactionnel examine les Markdown suivis par Git et les textes documentaires Python, sans modifier les fichiers. Les erreurs bloquent le contrôle ; les avertissements demandent une relecture contextualisée, notamment pour les rapports historiques. Ce contrôle heuristique ne remplace pas la revue documentaire.
+
+Ajouter `--include-untracked` pour inclure les nouveaux Markdown et Python non suivis, hors fichiers ignorés par Git. Des chemins relatifs explicites peuvent aussi être fournis ; ils restent contrôlés même s'ils sont ignorés. Les règles DOC007 et DOC008 sont bloquantes dans le README, mais restent des avertissements ou des exemptions historiques dans les rapports et gabarits ; DOC009 reste non bloquante.
 
 ## Scripts et reproduction des préparations
 

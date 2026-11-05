@@ -28,3 +28,16 @@ Projet universitaire M1 MIASHS 2026–2027 : prévision de la consommation élec
 - Exécuter les contrôles pertinents pour les changements réalisés.
 - Distinguer les vérifications réussies, les échecs et les contrôles impossibles.
 - Présenter en français les changements, les commandes et les limites.
+
+## Qualité rédactionnelle et documentaire
+
+- Rédiger le README et les rapports dans un français académique, clair, impersonnel et naturel.
+- Ne pas désigner le responsable du projet comme « l'utilisateur » ou « l'étudiant » dans les textes destinés à être publiés.
+- Éviter les formulations de dialogue avec un assistant, les commentaires sur la génération du texte et les instructions de pilotage internes.
+- Réserver les consignes destinées à Codex à `AGENTS.md`, sauf lorsqu'elles sont nécessaires à la reproductibilité.
+- Distinguer les résultats effectivement vérifiés, les déclarations du responsable du projet, les hypothèses scientifiques et les opérations non réalisées.
+- Dater les constats susceptibles de devenir obsolètes.
+- Ne jamais transformer une incertitude scientifique en certitude pour améliorer le style.
+- Préserver les faits historiques, les échecs, les sources et la traçabilité.
+- Vérifier que les gabarits Python ne réintroduisent pas d'anciennes formulations lors d'une exécution.
+- Relire les textes destinés à GitHub avant toute proposition de commit ; exécuter `python scripts/check_documentation.py` et examiner les avertissements sans réécrire automatiquement les constats historiques.
