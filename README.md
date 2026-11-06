@@ -23,9 +23,10 @@ Les approches envisagées sont la régression linéaire, Random Forest et Gradie
 - Les doublons temporels, puissances contradictoires, créneaux absents et statuts manquants ont été diagnostiqués.
 - Une grille UTC régulière de 30 minutes a été préparée, avec qualité et provenance : **258 574 créneaux**, dont **258 521 avec une puissance disponible**, **22 ambigus** et **31 absents**. Les 1 440 statuts RTE manquants sont conservés sans remplacement.
 - Deux séries horaires **expérimentales distinctes** ont été produites sur les mêmes bornes, sous les hypothèses d'étiquette de début et de fin d'intervalle. Aucune n'est présentée comme la convention physique confirmée par RTE.
+- Une première analyse exploratoire descriptive a été réalisée lors de la Mission 010 : qualité des données, évolution chronologique, distributions, profils calendaires et comparaison des scénarios A et B. Le [notebook exécuté](notebooks/010_analyse_exploratoire.ipynb), la [synthèse](reports/010_synthese_exploratoire.md) et cinq figures sont versionnés dans le commit `c9ccb33`. Cette analyse ne confirme la convention physique d'aucun des deux scénarios.
 - Des tests automatisés couvrent l'acquisition simulée, l'audit et les préparations sur données synthétiques. Les résultats d'exécution sont consignés dans les rapports de mission.
 
-Aucune EDA, construction de variables prédictives, modélisation ou évaluation de performances n'a encore été réalisée.
+Aucune construction de variables prédictives, modélisation ou évaluation de performances n'a encore été réalisée.
 
 ## Limites scientifiques ouvertes
 
@@ -90,7 +91,7 @@ Dans VS Code, sélectionner `.venv\Scripts\python.exe` avec **Python: Select Int
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
-Exécuter ces commandes depuis la racine du dépôt. Les tests sont synthétiques ; ils ne prouvent ni l'accès au portail ni une convention physique des données. Aucun notebook d'analyse n'est encore livré.
+Exécuter ces commandes depuis la racine du dépôt. Les tests sont synthétiques ; ils ne prouvent ni l'accès au portail ni une convention physique des données. Le notebook de la Mission 010 s'exécute depuis la racine du projet avec le noyau `.venv` et les données locales dont les empreintes sont contrôlées ; il ne télécharge aucune donnée.
 
 ## Scripts et reproduction des préparations
 
@@ -112,16 +113,16 @@ Consulter les commandes réellement utilisées dans les rapports ci-dessous. Les
 - [Préparation horaire expérimentale A/B](reports/preparation_horaire_experimentale.md).
 - [Audit des mises à jour et de Git, avec complément externe](reports/mission_009_audit_mises_a_jour_et_git.md).
 - [Corrections documentaires et préparation du commit](reports/mission_009_bis_preparation_commit.md).
+- [Synthèse de l'analyse exploratoire — Mission 010](reports/010_synthese_exploratoire.md), accompagnée du [notebook exécuté](notebooks/010_analyse_exploratoire.ipynb).
 
 Les rapports sont datés et peuvent décrire des états historiques : lire leurs compléments pour connaître les vérifications ultérieures. Les limites et hypothèses ne constituent pas des résultats de prévision.
 
 ## Prochaines étapes du projet
 
 1. Valider le protocole de cible et les limites des scénarios expérimentaux.
-2. Réaliser l'analyse exploratoire (EDA).
-3. Construire les variables explicatives en respectant leur disponibilité à l'origine.
-4. Entraîner les modèles envisagés et des références naïves.
-5. Effectuer une validation chronologique, puis une évaluation finale sur un test réservé, avec MAE et RMSE.
+2. Construire les variables explicatives en respectant leur disponibilité à l'origine.
+3. Entraîner les modèles envisagés et des références naïves.
+4. Effectuer une validation chronologique, puis une évaluation finale sur un test réservé, avec MAE et RMSE. Documenter les choix issus de l'exploration de toute la période : une période déjà explorée ne constitue pas un test entièrement inédit.
 
 Ces étapes sont prévues ; aucun résultat prédictif n'est annoncé à ce stade.
 
