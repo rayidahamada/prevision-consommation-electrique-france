@@ -31,7 +31,7 @@ Aucune EDA, construction de variables prédictives, modélisation ou évaluation
 
 Le rattachement début/fin d'intervalle des observations ODRÉ et la constance de leurs conventions historiques ne sont pas confirmés. La documentation éCO2mix distingue puissances instantanées et moyennes, mais sa transposition exacte à cet export reste à établir. Les scénarios horaires supposent une puissance moyenne demi-horaire et restent des constructions expérimentales.
 
-Les absences et conflits ne sont pas imputés ; les flags et statuts restent traçables. La disponibilité des données et de leurs révisions à l'instant d'une prévision historique reste une question distincte de leur date d'observation. Lors des contrôles documentés des 4 et 5 novembre 2026, les appels API depuis l'environnement Codex ont échoué. Les métadonnées communiquées à la suite d'une consultation externe ne prouvent pas l'identité de toutes les observations distantes.
+Les absences et conflits ne sont pas imputés ; les flags et statuts restent traçables. La disponibilité des données et de leurs révisions à l'instant d'une prévision historique reste une question distincte de leur date d'observation. L'accès API est bloqué depuis l'environnement Codex lors des derniers contrôles : les informations externes communiquées ne prouvent pas l'identité de toutes les observations distantes.
 
 ## Outils
 
@@ -88,14 +88,9 @@ Dans VS Code, sélectionner `.venv\Scripts\python.exe` avec **Python: Select Int
 ```powershell
 .\.venv\Scripts\python.exe -c "import numpy, pandas, matplotlib, sklearn, jupyter, ipykernel; print('Imports OK')"
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
-.\.venv\Scripts\python.exe scripts/check_documentation.py
 ```
 
 Exécuter ces commandes depuis la racine du dépôt. Les tests sont synthétiques ; ils ne prouvent ni l'accès au portail ni une convention physique des données. Aucun notebook d'analyse n'est encore livré.
-
-Le contrôle rédactionnel examine les Markdown suivis par Git et les textes documentaires Python, sans modifier les fichiers. Les erreurs bloquent le contrôle ; les avertissements demandent une relecture contextualisée, notamment pour les rapports historiques. Ce contrôle heuristique ne remplace pas la revue documentaire.
-
-Ajouter `--include-untracked` pour inclure les nouveaux Markdown et Python non suivis, hors fichiers ignorés par Git. Des chemins relatifs explicites peuvent aussi être fournis ; ils restent contrôlés même s'ils sont ignorés. Les règles DOC007 et DOC008 sont bloquantes dans le README, mais restent des avertissements ou des exemptions historiques dans les rapports et gabarits ; DOC009 reste non bloquante.
 
 ## Scripts et reproduction des préparations
 
@@ -104,7 +99,7 @@ Ajouter `--include-untracked` pour inclure les nouveaux Markdown et Python non s
 - [Préparation demi-horaire](src/preparer_electricite.py) : grille UTC, traitement explicite des conflits/absences et provenance.
 - [Préparation horaire expérimentale](src/preparer_horaire_experimental.py) : deux hypothèses séparées, qualité et bornes communes.
 
-Les commandes de reproduction figurent dans les rapports ci-dessous. Les scripts de préparation utilisent des chemins explicites et refusent d'écraser leurs sorties. Toute nouvelle acquisition ou reconstruction doit identifier la version des données et utiliser de nouveaux chemins de sortie ; aucun téléchargement automatique n'est déclenché par le dépôt.
+Consulter les commandes réellement utilisées dans les rapports ci-dessous. Les scripts de préparation offrent des chemins explicites et refusent d'écraser leurs sorties. Ne pas relancer une acquisition volumineuse ou une reconstruction sans validation de la version et des chemins ; aucun téléchargement automatique n'est déclenché par le dépôt.
 
 ## Principaux rapports
 
