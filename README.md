@@ -24,6 +24,8 @@ Les approches envisagées sont la régression linéaire, Random Forest et Gradie
 - Une grille UTC régulière de 30 minutes a été préparée, avec qualité et provenance : **258 574 créneaux**, dont **258 521 avec une puissance disponible**, **22 ambigus** et **31 absents**. Les 1 440 statuts RTE manquants sont conservés sans remplacement.
 - Deux séries horaires **expérimentales distinctes** ont été produites sur les mêmes bornes, sous les hypothèses d'étiquette de début et de fin d'intervalle. Aucune n'est présentée comme la convention physique confirmée par RTE.
 - Une première analyse exploratoire descriptive a été réalisée lors de la Mission 010 : qualité des données, évolution chronologique, distributions, profils calendaires et comparaison des scénarios A et B. Le [notebook exécuté](notebooks/010_analyse_exploratoire.ipynb), la [synthèse](reports/010_synthese_exploratoire.md) et cinq figures sont versionnés dans le commit `c9ccb33`. Cette analyse ne confirme la convention physique d'aucun des deux scénarios.
+- La Mission 011 a documenté un [protocole de prévision et d'évaluation](reports/011_protocole_prevision_evaluation.md) : émission quotidienne envisagée à 00:00 UTC, 24 horizons horaires, découpage chronologique, références simples et métriques MAE/RMSE. La première expérience recommandée est un benchmark rétrospectif conditionnel sur archive révisée, sans disponibilité historique des publications démontrée. Les choix proposés restent soumis à examen scientifique.
+- Une étude exploratoire éCO₂mix examine la récupération d'observations récentes pour une éventuelle application web, présentée ci-dessous.
 - Des tests automatisés couvrent l'acquisition simulée, l'audit et les préparations sur données synthétiques. Les résultats d'exécution sont consignés dans les rapports de mission.
 
 Aucune construction de variables prédictives, modélisation ou évaluation de performances n'a encore été réalisée.
@@ -32,7 +34,17 @@ Aucune construction de variables prédictives, modélisation ou évaluation de p
 
 Le rattachement début/fin d'intervalle des observations ODRÉ et la constance de leurs conventions historiques ne sont pas confirmés. La documentation éCO2mix distingue puissances instantanées et moyennes, mais sa transposition exacte à cet export reste à établir. Les scénarios horaires supposent une puissance moyenne demi-horaire et restent des constructions expérimentales.
 
-Les absences et conflits ne sont pas imputés ; les flags et statuts restent traçables. La disponibilité des données et de leurs révisions à l'instant d'une prévision historique reste une question distincte de leur date d'observation. L'accès API est bloqué depuis l'environnement Codex lors des derniers contrôles : les informations externes communiquées ne prouvent pas l'identité de toutes les observations distantes.
+Les absences et conflits ne sont pas imputés ; les flags et statuts restent traçables. La disponibilité des données et de leurs révisions à l'instant d'une prévision historique reste une question distincte de leur date d'observation. Le 6 novembre 2026, les appels ont échoué dans l'environnement Codex, mais un contrôle éCO₂mix a réussi depuis le PowerShell Windows ordinaire. Ce succès ne prouve ni l'identité des versions historiques ni leur disponibilité passée.
+
+## Perspective facultative : application web de prévision
+
+Une application web pourrait afficher les prévisions des 24 prochaines heures, **seulement si le temps disponible et les conditions techniques et scientifiques le permettent**. Streamlit est une possibilité envisagée, sans choix définitif. Aucune application n'est développée ; elle ne constitue pas un livrable obligatoire. La prévision et son évaluation scientifique restent prioritaires.
+
+Le commit `50111ef` regroupe les scripts, tests et conclusions de cette étude. Le [rapport de faisabilité](reports/exploration_faisabilite_application.md) et le [dossier exploratoire](experiments/faisabilite_application/) détaillent les contrôles et leur reproduction ; les journaux locaux sont exclus de Git.
+
+Le contrôle du 6 novembre 2026 a récupéré une consommation de **59 358 MW horodatée à 14:00 UTC**, âgée d'environ **24 minutes à réception**. Deux requêtes distinctes concordent ponctuellement sur le maximum temporel et le comptage des observations éligibles. Cela établit un accès ponctuel à une observation récente, sans résoudre l'anomalie de pagination d'un audit précédent.
+
+**B — Faisabilité envisageable, mais conditionnelle.** La disponibilité quotidienne à 00:00 UTC, les délais réels de publication et la compatibilité physique avec les scénarios A/B restent non démontrés. L'âge d'une observation ne mesure pas son délai de publication.
 
 ## Outils
 
@@ -45,6 +57,7 @@ data/
   raw/              # Données sources, ignorées par Git
   processed/        # Grille et CSV expérimentaux générés, ignorés par Git
 notebooks/          # Analyses exploratoires
+experiments/        # Études exploratoires facultatives
 src/                # Acquisition, audit et préparations reproductibles
 models/             # Modèles à venir
 reports/
@@ -114,12 +127,13 @@ Consulter les commandes réellement utilisées dans les rapports ci-dessous. Les
 - [Audit des mises à jour et de Git, avec complément externe](reports/mission_009_audit_mises_a_jour_et_git.md).
 - [Corrections documentaires et préparation du commit](reports/mission_009_bis_preparation_commit.md).
 - [Synthèse de l'analyse exploratoire — Mission 010](reports/010_synthese_exploratoire.md), accompagnée du [notebook exécuté](notebooks/010_analyse_exploratoire.ipynb).
+- [Protocole de prévision et d'évaluation — Mission 011](reports/011_protocole_prevision_evaluation.md).
 
 Les rapports sont datés et peuvent décrire des états historiques : lire leurs compléments pour connaître les vérifications ultérieures. Les limites et hypothèses ne constituent pas des résultats de prévision.
 
 ## Prochaines étapes du projet
 
-1. Valider le protocole de cible et les limites des scénarios expérimentaux.
+1. Préparer la Mission 012 en précisant les choix encore ouverts du protocole de Mission 011 : cible, disponibilité des historiques et panel de comparaison, sans lever par hypothèse les incertitudes physiques des scénarios A/B.
 2. Construire les variables explicatives en respectant leur disponibilité à l'origine.
 3. Entraîner les modèles envisagés et des références naïves.
 4. Effectuer une validation chronologique, puis une évaluation finale sur un test réservé, avec MAE et RMSE. Documenter les choix issus de l'exploration de toute la période : une période déjà explorée ne constitue pas un test entièrement inédit.
